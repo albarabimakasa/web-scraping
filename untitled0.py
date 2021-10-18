@@ -19,11 +19,21 @@ page.text
 soup = BeautifulSoup(page.text, 'lxml')
 soup
 
+#mengakses tag header
 soup.header
 
+#mengakses tag div
 soup.div
 
+#mengakses tag h1
 soup.h1
 
+#mengambil string dari tag dalam tag (nested tag)
 soup.header.p
+soup.header.p.string
 
+#mengambil tag a dalam <header>
+a_awal = soup.header.a
+a_awal
+
+#mendapatkan attributesnya saja
