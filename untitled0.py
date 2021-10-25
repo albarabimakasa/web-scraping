@@ -37,27 +37,27 @@ a_awal = soup.header.a
 a_awal
 
 #mendapatkan attributesnya saja
- a_awal.attrs
- a_awal['data-target']
- a_awal['data-baru'] = 'ini adalah yang baru lo'
- a_awal.attrs
- a_awal
+a_awal.attrs
+a_awal['data-target']
+a_awal['data-baru'] = 'ini adalah yang baru lo'
+a_awal.attrs
+a_awal
  
- soup.header.div
+soup.header.div
  
- #mencari attribute tertentu dalam sebuah tag
+#mencari attribute tertentu dalam sebuah tag
  
- soup.find('div',{'class':'side-collapse in'}) 
- soup.find('div',{'class':'container-fluid blog-hero'})
- soup.find('div',{'id':'layout-footer'}) 
+soup.find('div',{'class':'side-collapse in'}) 
+soup.find('div',{'class':'container-fluid blog-hero'})
+soup.find('div',{'id':'layout-footer'}) 
  
- soup.find('div', class_ ='container')
+soup.find('div', class_ ='container')
  
- #menggunakan find all
- soup.find_all('h4', class_ = 'pull-right price')
+#menggunakan find all
+soup.find_all('h4', class_ = 'pull-right price')
  
- #slicing pada find all
- soup.find_all('h4', class_ = 'pull-right price')[2:5]
+#slicing pada find all
+soup.find_all('h4', class_ = 'pull-right price')[2:5]
  
  
  
@@ -95,17 +95,9 @@ for i in rating:
     ratingsi = i.text
     rating_list.append(ratingsi)
  
-soup.find('div',{'class':'side-collapse in'}) 
-soup.find_all('div' ,{'p':'data-rating'}) 
+rating = soup.find_all('div', class_ = 'ratings')
+rating
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+
  
