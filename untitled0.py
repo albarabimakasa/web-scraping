@@ -4,6 +4,7 @@ Created on Sun Oct 17 06:21:03 2021
 
 @author: Albara Bimakasa
 """
+#import the library 
 
 from bs4 import BeautifulSoup
 import requests
@@ -20,24 +21,24 @@ page.text
 soup = BeautifulSoup(page.text, 'lxml')
 soup
 
-#mengakses tag header
+#how to access tag header
 soup.header
 
-#mengakses tag div
+#access tag div
 soup.div
 
-#mengakses tag h1
+#access tag h1
 soup.h1
 
-#mengambil string dari tag dalam tag (nested tag)
+#get string from tag in tag (nested tag)
 soup.header.p
 soup.header.p.string
 
-#mengambil tag a dalam <header>
+#get tag a in <header>
 a_awal = soup.header.a
 a_awal
 
-#mendapatkan attributesnya saja
+#get the attributes only
 a_awal.attrs
 a_awal['data-target']
 a_awal['data-baru'] = 'ini adalah yang baru lo'
@@ -46,7 +47,7 @@ a_awal
  
 soup.header.div
  
-#mencari attribute tertentu dalam sebuah tag
+#get specific attribute in a tag
  
 soup.find('div',{'class':'side-collapse in'}) 
 soup.find('div',{'class':'container-fluid blog-hero'})
@@ -54,13 +55,13 @@ soup.find('div',{'id':'layout-footer'})
  
 soup.find('div', class_ ='container')
  
-#menggunakan find all
+#use find all
 soup.find_all('h4', class_ = 'pull-right price')
  
-#slicing pada find all
+#slicing in find all
 soup.find_all('h4', class_ = 'pull-right price')[2:5]
  
- 
+#get the data
  
 nama = soup.find_all('a', class_ = 'title')
 nama
@@ -81,7 +82,7 @@ bintang = soup.find_all('div',{'p':'data-rating'})
 bintang
 
 
-#membuat string dari list find all 
+#make string from list find all 
 
 nama_produk_list = []
 
